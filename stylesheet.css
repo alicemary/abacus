@@ -1,0 +1,58 @@
+html{
+	box-sizing: border-box;
+}
+
+*, *:before, *:after{
+	box-sizing: inherit;
+	font-size: 16px;
+	font-family: 'B612 Mono', monospace;
+	padding: 0;
+	margin: 0;
+}
+
+
+
+.exterior-table{
+	margin-top: 30px;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+table, td, th{
+	border-collapse: collapse;
+}
+
+table{
+	height: 200px;
+	margin-left: 50px;
+	margin-bottom: 30px;
+}
+
+td{
+	height: calc(100%/8);
+}
+
+
+tr:last-child{
+	border-top: 1px solid black;
+}
+
+
+@media print{
+	*{
+		background-color: transparent;
+		color: #000;
+		font-size: 10pt;
+	}
+	table{
+		margin-left: 30pt;
+	}
+	.exterior-table{
+		margin-top: 100pt;
+	}
+}
+
+@page{
+	size: landscape;
+}
+
